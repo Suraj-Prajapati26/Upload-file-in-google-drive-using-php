@@ -4,9 +4,9 @@ session_start();
 require_once __DIR__ . '/vendor/autoload.php';
 
 $client = new Google_Client();
-$client->setClientId('1065293136026-m69v8npcc6826ejod57q8jj3b6cdvnhr.apps.googleusercontent.com');
-$client->setClientSecret('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');
-$client->setRedirectUri('http://localhost/zzz/hello.php');
+$client->setClientId('YOUR_CLIENT_ID');
+$client->setClientSecret('YOUR_CLIENT_SECRET');
+$client->setRedirectUri('YOUR-REDIRECT-URI');
 $client->addScope(Google_Service_Drive::DRIVE_FILE);
 
 if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
@@ -23,7 +23,7 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
     if (isset($_FILES['file']) && $_FILES['file']['error'] == 0) {
       $fileMetadata = new Google_Service_Drive_DriveFile(array(
         'name' => $_FILES['file']['name'],
-        'parents' => array('1VFqR4BIP6gZUoHO0PpKSFREiHa4Y_hKM'),
+        'parents' => array('YOUR-FOLDER-ID'),       // FOLDER ID WHERE U WANT TO UPLOAD FILE IN DRIVE//
         'mimeType' => $_FILES['file']['type']
       ));
       $content = file_get_contents($_FILES['file']['tmp_name']);
