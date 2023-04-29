@@ -1,6 +1,8 @@
 # Upload-file-in-google-drive-using-php
 In this u can upload a file in google drive using php.
-Through this code u can upload a select a file from your computer and upload it in a particular folder of a google drive.
+Through this code u can select a file from your computer and upload it in a particular folder of a google drive.
+
+I DID THIS CODE ON MY LOCAL SERVER THAT IS - XAMPP
 
 #To upload a file to Google Drive using PHP, you can use the Google Drive API PHP client library. Here are the steps you can follow:
 1. Create a new project in the Google Developers Console and enable the Google Drive API.
